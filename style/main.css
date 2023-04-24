@@ -186,8 +186,30 @@ body {
   gap: 18px;
 }
 .restaurants-cards .card {
+  position: relative;
   box-sizing: border-box;
   flex: 1;
+}
+.restaurants-cards .card-nouveau {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 29px;
+  background-color: #99E2D0;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 2px;
+}
+.restaurants-cards .card-nouveau p {
+  font-size: 14px;
+  font-weight: 500;
+  color: #008766;
+}
+.restaurants-cards .card-nouveau #btn-control:active {
+  display: hidden;
 }
 .restaurants-cards .card article {
   display: flex;
@@ -219,9 +241,54 @@ body {
   margin-top: 5px;
   margin-bottom: 0;
 }
-.restaurants-cards .card article .card-txt .card-icon {
+.restaurants-cards .card article .card-txt .fa-regular {
   font-size: 22px;
   margin-right: 12px;
+}
+.restaurants-cards .card article .card-txt .fa-solid {
+  display: none;
+  margin-right: 12px;
+  font-size: 22px;
+  color: transparent;
+  -webkit-background-clip: text;
+          background-clip: text;
+  background-image: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+}
+
+input[type=checkbox] {
+  display: none;
+}
+
+#heart:checked ~ .fa-solid {
+  display: inline-block;
+}
+
+#heart:checked ~ .fa-regular {
+  display: none;
+}
+
+#heart2:checked ~ .fa-solid {
+  display: inline-block;
+}
+
+#heart2:checked ~ .fa-regular {
+  display: none;
+}
+
+#heart3:checked ~ .fa-solid {
+  display: inline-block;
+}
+
+#heart3:checked ~ .fa-regular {
+  display: none;
+}
+
+#heart4:checked ~ .fa-solid {
+  display: inline-block;
+}
+
+#heart4:checked ~ .fa-regular {
+  display: none;
 }
 
 footer {

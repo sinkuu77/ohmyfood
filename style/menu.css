@@ -1,0 +1,20 @@
+.header__logo a {
+  position: fixed;
+  display: flex;
+  font-size: 17px;
+  left: 23px;
+  padding-top: 14px;
+  color: #353535;
+}
+
+.background__img {
+  width: 100%;
+  min-width: 375px;
+  height: 275px;
+  background-image: url(../images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
+  background-size: cover;
+}
+
+.mune {
+  width: 100%;
+}/*# sourceMappingURL=menu.css.map */

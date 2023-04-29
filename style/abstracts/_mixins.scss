@@ -1,0 +1,97 @@
+//body styles
+@mixin body-style {
+    width: 100%;
+    height: 100vh;
+    margin: 0 auto;
+    float: none;
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    justify-content: center;
+    overflow-x: hidden;
+}
+
+//logo au header
+@mixin header-logo {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 15px 0;
+    background-color: $white-color;
+    img {
+        width: 162px;
+        height: 30px;
+        padding-top: 14px;
+        color: $logo-color;
+    }
+}
+
+//style du cta button
+@mixin form-cta {
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 25px;
+    button {
+        height: 50px;
+        background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+        border-radius: 25px;
+        transform: matrix(1, 0, 0, -1, 0, 0);
+        border: none;
+        &:hover {
+            opacity: 80%;
+            cursor: pointer;
+            transition: all 0.2s ease-in;
+        }
+    }
+    div {
+        transform: matrix(-1, 0, 0, 1, 0, 0) rotate(180deg);
+        color: $main-bg-color;
+        font-size: 16px;
+        font-weight: 500;
+    }
+}
+
+//style du footer
+@mixin footer {
+    width: 100%;
+    background-color: #353535;
+    padding: 22px 25px;
+    .footer__contents {
+        display: flex;
+        flex-direction: column;
+        gap: 9px;
+        h2 {
+            font-size: 18px;
+            font-family: $point-font;
+            font-weight: 400;
+            color: $white-color;
+            margin: 0;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            li {
+                margin-top: 7px;
+                color: $white-color;
+                font-size: 16px;
+                font-weight: 500;
+            }
+            i {
+                margin-right: 11px;
+            }
+        }
+        .footer__second {
+            li {
+                font-weight: 400;
+            }
+        }
+    }
+}
+
+//background-img pour les pages menu 
+@mixin background-img {
+    width: 100%;
+    min-width: 375px;
+    height: 275px;
+    background-size: cover;
+    position: relative;
+}

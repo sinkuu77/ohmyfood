@@ -1,0 +1,28 @@
+//footer
+footer {
+    @include footer;
+    @media (min-width: 768px) {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 57px 50px;
+    .footer__contents {
+        flex-direction: row-reverse;
+        justify-content:flex-start;
+        align-items: center;
+        h2 {
+            padding-left: 60px;
+        }
+        .footer__list {
+            display: flex;
+            justify-content: space-around;
+            gap: 30px;
+            ul {
+                display: flex;
+                li {
+                    padding-left: 10px;
+                }
+            }
+        }
+    }
+    }
+}

@@ -1,0 +1,31 @@
+//style basique pour html
+html {
+    overflow-x: hidden;
+    @media (min-width: 768px) {
+        overflow-x: hidden;
+    }
+}
+
+
+//style basique pour la balise a
+a {
+    color: unset;
+    text-decoration: none;
+}
+
+//style basique pour body
+body {
+    @include body-style;
+    @media (min-width: 768px) {
+        width: 100%;
+        margin: 0 auto;
+        float: none;
+    }
+}
+
+//style basique pour main
+.main__container {
+    width: 100%;
+    padding: 0;
+    box-sizing: border-box;
+}

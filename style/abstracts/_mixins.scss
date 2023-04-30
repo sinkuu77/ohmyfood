@@ -31,21 +31,17 @@
     border-radius: 25px;
     button {
         height: 50px;
-        background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+        background: linear-gradient(358deg, #9356DC -11.44%, #FF79DA 123.93%);
         border-radius: 25px;
-        transform: matrix(1, 0, 0, -1, 0, 0);
         border: none;
-        &:hover {
-            opacity: 80%;
-            cursor: pointer;
-            transition: all 0.2s ease-in;
-        }
-    }
-    div {
-        transform: matrix(-1, 0, 0, 1, 0, 0) rotate(180deg);
         color: $main-bg-color;
         font-size: 16px;
         font-weight: 500;
+        transition: opacity 300ms ease-in-out;
+        &:hover {
+            opacity: 80%;
+            cursor: pointer;
+        }
     }
 }
 
@@ -94,4 +90,7 @@
     height: 275px;
     background-size: cover;
     position: relative;
+    h2 {
+        display: none;
+    }
 }

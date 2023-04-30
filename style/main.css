@@ -213,21 +213,17 @@ footer .footer__contents .footer__second li {
 }
 .explore__contents form button {
   height: 50px;
-  background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+  background: linear-gradient(358deg, #9356DC -11.44%, #FF79DA 123.93%);
   border-radius: 25px;
-  transform: matrix(1, 0, 0, -1, 0, 0);
   border: none;
+  color: #f6f6f6;
+  font-size: 16px;
+  font-weight: 500;
+  transition: opacity 300ms ease-in-out;
 }
 .explore__contents form button:hover {
   opacity: 80%;
   cursor: pointer;
-  transition: all 0.2s ease-in;
-}
-.explore__contents form div {
-  transform: matrix(-1, 0, 0, 1, 0, 0) rotate(180deg);
-  color: #f6f6f6;
-  font-size: 16px;
-  font-weight: 500;
 }
 .explore__contents form button {
   width: 218px;
@@ -332,11 +328,40 @@ footer .footer__contents .footer__second li {
   gap: 18px;
 }
 .restaurants__cards .card {
-  position: relative;
+  width: 100%;
   box-sizing: border-box;
   flex: 1;
+  position: relative;
 }
-.restaurants__cards .card__nouveau {
+.restaurants__cards .card__heart .fa-regular {
+  position: absolute;
+  font-size: 22px;
+  margin-right: 12px;
+  bottom: 33px;
+  right: 15px;
+  z-index: 2;
+}
+.restaurants__cards .card__heart .fa-solid {
+  position: absolute;
+  display: none;
+  margin-right: 12px;
+  font-size: 22px;
+  color: transparent;
+  -webkit-background-clip: text;
+          background-clip: text;
+  background-image: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+  bottom: 33px;
+  right: 15px;
+  z-index: 2;
+}
+.restaurants__cards .card a {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+.restaurants__cards .card a .card__nouveau {
   position: absolute;
   top: 15px;
   right: 15px;
@@ -348,54 +373,38 @@ footer .footer__contents .footer__second li {
   background-color: #99E2D0;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
   border-radius: 2px;
+  z-index: 2;
 }
-.restaurants__cards .card__nouveau p {
+.restaurants__cards .card a .card__nouveau p {
   font-size: 14px;
   font-weight: 500;
   color: #008766;
 }
-.restaurants__cards .card article {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  height: 100%;
-}
-.restaurants__cards .card article img {
+.restaurants__cards .card a img {
+  position: relative;
   -o-object-fit: cover;
      object-fit: cover;
   width: 100%;
   height: 90%;
   max-height: 200px;
   border-radius: 20px 20px 0px 0px;
+  z-index: 1;
 }
-.restaurants__cards .card article .card__txt {
+.restaurants__cards .card a .card__txt {
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 10%;
   border-radius: 0px 0px 20px 20px;
   background-color: #ffffff;
   padding: 16px 13px;
 }
-.restaurants__cards .card article .card__txt h3 {
+.restaurants__cards .card a .card__txt h3 {
   margin: 0;
 }
-.restaurants__cards .card article .card__txt p {
+.restaurants__cards .card a .card__txt p {
   margin-top: 5px;
   margin-bottom: 0;
-}
-.restaurants__cards .card article .card__txt .fa-regular {
-  font-size: 22px;
-  margin-right: 12px;
-}
-.restaurants__cards .card article .card__txt .fa-solid {
-  display: none;
-  margin-right: 12px;
-  font-size: 22px;
-  color: transparent;
-  -webkit-background-clip: text;
-          background-clip: text;
-  background-image: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
 }
 @media (min-width: 768px) {
   .restaurants {
@@ -411,10 +420,9 @@ footer .footer__contents .footer__second li {
     justify-content: space-between;
   }
   .restaurants__cards .card {
-    display: flex;
     flex: 50%;
     max-width: 45%;
-    gap: 100px;
+    margin-bottom: 30px;
   }
 }
 
@@ -434,6 +442,9 @@ footer .footer__contents .footer__second li {
   background-size: cover;
   position: relative;
   background-image: url(../images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
+}
+.background__img h2 {
+  display: none;
 }
 
 .menu {
@@ -488,6 +499,7 @@ footer .footer__contents .footer__second li {
   border-radius: 15px;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
   padding: 12px 15px;
+  position: relative;
 }
 .menu__container .menu__contents h3 {
   font-weight: 500;
@@ -509,6 +521,22 @@ footer .footer__contents .footer__second li {
   font-weight: 700;
   color: #353535;
 }
+.menu__container .menu__contents .checkbox__container {
+  width: 118px;
+  height: 69px;
+  border-radius: 15px;
+  top: 0;
+  right: 0;
+  background-color: #99E2D0;
+  position: absolute;
+}
+.menu__container .menu__contents .checkbox__container .checkbox {
+  width: 100%;
+  height: 100%;
+  -moz-appearance: none;
+       appearance: none;
+  -webkit-appearance: none;
+}
 .menu .commander-btn {
   display: flex;
   justify-content: center;
@@ -522,21 +550,17 @@ footer .footer__contents .footer__second li {
 }
 .menu .commander-btn form button {
   height: 50px;
-  background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+  background: linear-gradient(358deg, #9356DC -11.44%, #FF79DA 123.93%);
   border-radius: 25px;
-  transform: matrix(1, 0, 0, -1, 0, 0);
   border: none;
+  color: #f6f6f6;
+  font-size: 16px;
+  font-weight: 500;
+  transition: opacity 300ms ease-in-out;
 }
 .menu .commander-btn form button:hover {
   opacity: 80%;
   cursor: pointer;
-  transition: all 0.2s ease-in;
-}
-.menu .commander-btn form div {
-  transform: matrix(-1, 0, 0, 1, 0, 0) rotate(180deg);
-  color: #f6f6f6;
-  font-size: 16px;
-  font-weight: 500;
 }
 .menu .commander-btn form button {
   width: 186px;

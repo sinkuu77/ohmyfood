@@ -10,16 +10,12 @@
     'base/base',
     'base/fonts';
 
-//3. components à modifier
-@import
-    'components/heart';
-
-//4. layout
+//3. layout
 @import
     'layout/footer',
     'layout/header';
 
-//5. pages
+//4. pages
 @import
     'pages/homepage',
     'pages/menu';

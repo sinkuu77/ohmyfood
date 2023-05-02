@@ -556,10 +556,25 @@ footer .footer__contents .footer__second li {
   flex-direction: column;
   gap: 12px;
   padding: 0 13px 40px;
+  opacity: 0;
+  transform: translateY(-30px);
+}
+.menu__container:nth-child(1) {
+  animation: apparition 0.8s 0.2s ease-out forwards;
+}
+.menu__container:nth-child(2) {
+  animation: apparition 0.8s 0.8s ease-out forwards;
+}
+.menu__container:nth-child(3) {
+  animation: apparition 0.8s 1.6s ease-out forwards;
+}
+.menu__container:nth-child(4) {
+  animation: apparition 0.8s 2.4s ease-out forwards;
 }
 .menu__container h2 {
   font-weight: 300;
   font-size: 16px;
+  text-transform: uppercase;
   margin: 0;
   border-bottom: 3px solid #99E2D0;
   padding-bottom: 5px;
@@ -572,9 +587,29 @@ footer .footer__contents .footer__second li {
   padding: 12px 15px;
   position: relative;
   cursor: pointer;
+  transition: padding-right 0.3s linear;
+  overflow: hidden;
 }
-.menu__container .menu__contents:hover + .check__container {
-  color: red;
+.menu__container .menu__contents:hover {
+  padding-right: 124px;
+}
+.menu__container .menu__contents::before {
+  content: "";
+  position: absolute;
+  right: -62px;
+  top: 0;
+  width: 8%;
+  height: 100%;
+  background: #99E2D0;
+  z-index: 1;
+  transition: transform 0.3s linear;
+  transform-origin: 0 0;
+  transform: scaleX(0);
+  border-top-left-radius: 13px;
+  border-bottom-left-radius: 13px;
+}
+.menu__container .menu__contents:hover::before {
+  transform: scaleX(-1);
 }
 .menu__container .menu__contents h3 {
   font-weight: 500;
@@ -592,26 +627,26 @@ footer .footer__contents .footer__second li {
 .menu__container .menu__contents .menu__txt :first-child {
   font-weight: 300;
 }
-.menu__container .menu__contents .menu__txt :last-child {
+.menu__container .menu__contents .menu__txt .euro {
+  position: relative;
+  top: 0px;
+  left: 300px;
   font-weight: 700;
   color: #353535;
 }
-.menu__container .menu__contents .check__container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 59px;
-  height: 69px;
-  border-top-right-radius: 15px;
-  border-bottom-right-radius: 15px;
-  top: 0;
-  right: 46px;
-  background-color: #99E2D0;
-  position: absolute;
-}
-.menu__container .menu__contents .check__container i {
-  color: #ffffff;
+.menu__container .menu__contents .menu__txt i {
+  position: relative;
+  top: -16px;
+  left: 102px;
   font-size: 20px;
+  color: #ffffff;
+  z-index: 3;
+}
+@keyframes apparition {
+  100% {
+    opacity: 1;
+    transform: none;
+  }
 }
 .menu .commander-btn {
   display: flex;
@@ -657,6 +692,9 @@ footer .footer__contents .footer__second li {
   }
   .menu__container {
     width: 70%;
+  }
+  .menu__container h2 {
+    width: 5%;
   }
 }
 

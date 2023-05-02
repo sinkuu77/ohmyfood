@@ -63,9 +63,24 @@
         flex-direction: column;
         gap: 12px;
         padding: 0 13px 40px;
+        opacity: 0;
+        transform: translateY(-30px);
+        &:nth-child(1) {
+            animation: apparition 0.8s 0.2s ease-out forwards;
+        }
+        &:nth-child(2) {
+            animation: apparition 0.8s 0.8s ease-out forwards;
+        }
+        &:nth-child(3) {
+            animation: apparition 0.8s 1.6s ease-out forwards;
+        }
+        &:nth-child(4) {
+            animation: apparition 0.8s 2.4s ease-out forwards;
+        }
         h2 {
             font-weight: 300;
             font-size: 16px;
+            text-transform: uppercase;
             margin: 0;
             border-bottom: 3px solid #99E2D0;
             padding-bottom: 5px;
@@ -78,8 +93,28 @@
         padding: 12px 15px;
         position: relative;
         cursor: pointer;
-        &:hover + .check__container{
-            color: red;
+        transition: padding-right 0.3s linear;
+        overflow: hidden;
+        &:hover {
+            padding-right: 124px;
+        }
+        &::before {
+            content: "";
+            position: absolute;
+            right: -62px;
+            top: 0;
+            width: 8%;
+            height: 100%;
+            background: $nouveau-bg-color;
+            z-index: 1;
+            transition: transform 0.3s linear;
+            transform-origin: 0 0;
+            transform: scaleX(0);
+            border-top-left-radius: 13px;
+            border-bottom-left-radius: 13px;
+        }
+        &:hover::before{
+            transform: scaleX(-1);
         }
         h3 {
             font-weight: 500;
@@ -96,26 +131,26 @@
             :first-child {
                 font-weight: 300;
             }
-            :last-child {
+            .euro{
+                position: relative;
+                top: 0px;
+                left: 300px;
                 font-weight: 700;
                 color: #353535;
             }
-        }
-        .check__container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 59px;
-            height: 69px;
-            border-top-right-radius: 15px;
-            border-bottom-right-radius: 15px;
-            top: 0;
-            right: 46px;
-            background-color: $nouveau-bg-color;
-            position: absolute;
             i {
-                color: #ffffff;
+                position: relative;
+                top: -16px;
+                left: 102px;
                 font-size: 20px;
+                color: #ffffff;
+                z-index: 3;
+            }
+        }
+        @keyframes apparition {
+            100% {
+                opacity: 1;
+                transform: none;
             }
         }
         }
@@ -146,6 +181,9 @@
         }
         &__container {
             width: 70%;
+            h2 {
+                width: 5%;
+            }
         }
     }
 }

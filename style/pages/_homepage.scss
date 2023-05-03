@@ -6,14 +6,19 @@
     background: $main-bg-color;
     z-index: 3;
     -webkit-scrollbar: none;
-    display: none;
+    display: flex;
     justify-content: center;
     align-items: center;
-    animation: fade-out 3s 0s ease-out;
+    animation: fade-out 5s ease-out;
     animation-iteration-count: 1;
+    transform: scaleZ(0);
+    transform-origin: top;
     @keyframes fade-out {
-        0% {display: flex;}
-        100% {display: none;}
+        0% {transform: scaleZ(1); opacity: 1;}
+        50% {opacity: 1;}
+        60% {opacity: 0.6;}
+        70% {opacity: 0.3;}
+        100% {transform: scaleZ(0); opacity: 0;}
     }
     .loader {
         border: 16px solid #e6e1e1;
@@ -33,7 +38,7 @@
 //explore & cta btn
 .explore {
     padding: 40px;
-    background-color: #f6f6f6;
+    background-color: $main-bg-color;
     &__contents {
         display: flex;
         flex-direction: column;

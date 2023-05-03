@@ -4,7 +4,7 @@
     height: 100vh;
     margin: 0 auto;
     float: none;
-    font-family: 'Roboto', sans-serif;
+    font-family: $main-font;
     display: flex;
     justify-content: center;
     overflow-x: hidden;
@@ -33,7 +33,7 @@
         font-size: 22px;
         margin-right: 12px;
         z-index: 2;
-        background-color: #ffffff;
+        background-color: $white-color;
         cursor: pointer;
         transition: all 0.5s ease-in-out;
         &:hover {
@@ -75,7 +75,7 @@
 //style du footer
 @mixin footer {
     width: 100%;
-    background-color: #353535;
+    background-color: $text-point-color;
     padding: 22px 25px;
     .footer__contents {
         display: flex;

@@ -96,14 +96,14 @@
         transition: padding-right 0.3s linear;
         overflow: hidden;
         &:hover {
-            padding-right: 124px;
+            padding-right: 84px;
         }
         &::before {
             content: "";
             position: absolute;
             right: -62px;
             top: 0;
-            width: 8%;
+            width: 29px;
             height: 100%;
             background: $nouveau-bg-color;
             z-index: 1;
@@ -114,12 +114,15 @@
             border-bottom-left-radius: 13px;
         }
         &:hover::before{
-            transform: scaleX(-1);
+            transform: scaleX(-3.5);
         }
         h3 {
             font-weight: 500;
             margin: 0;
             padding-bottom: 5px;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: nowrap;
         }
         .menu__txt {
             display: flex;
@@ -127,25 +130,31 @@
             p {
                 margin: 0;
                 font-size: 14px;
-            }
-            :first-child {
                 font-weight: 300;
+                text-overflow: ellipsis;
+                overflow: hidden;
+                white-space: nowrap;
             }
+            .slide {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
             .euro{
                 position: relative;
                 top: 0px;
-                left: 300px;
+                left: 27px;
                 font-weight: 700;
                 color: #353535;
             }
             i {
                 position: relative;
                 top: -16px;
-                left: 102px;
+                left: 64px;
                 font-size: 20px;
                 color: #ffffff;
                 z-index: 3;
             }
+        }
         }
         @keyframes apparition {
             100% {

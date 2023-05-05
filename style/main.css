@@ -157,7 +157,6 @@ footer .footer__contents .footer__second li {
   height: 100%;
   background: #f6f6f6;
   z-index: 3;
-  -webkit-scrollbar: none;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -502,15 +501,30 @@ footer .footer__contents .footer__second li {
   background-size: cover;
   background-position: center;
   position: relative;
-  background-image: url(../images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
 }
-.background__img h2 {
+.background__img h1 {
   display: none;
 }
 @media (min-width: 768px) {
   .background__img {
     height: 500px;
   }
+}
+
+.palette {
+  background-image: url(../images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
+}
+
+.note {
+  background-image: url(../images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg);
+}
+
+.francaise {
+  background-image: url(../images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg);
+}
+
+.delice {
+  background-image: url(../images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg);
 }
 
 .menu {
@@ -527,7 +541,7 @@ footer .footer__contents .footer__second li {
   justify-content: space-between;
   align-items: center;
 }
-.menu__title h1 {
+.menu__title h2 {
   font-family: "Shrikhand", sans-serif;
   font-weight: 400;
   font-size: 28px;

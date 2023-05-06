@@ -1,16 +1,10 @@
 //style basique pour html
 html {
     overflow-x: hidden;
+    height: 100vh;
     @media (min-width: 768px) {
     overflow-x: hidden;
     }
-}
-
-
-//style basique pour la balise a
-a {
-    color: unset;
-    text-decoration: none;
 }
 
 //style basique pour body
@@ -23,11 +17,6 @@ body {
     }
 }
 
-html {
-    height: 100vh;
-}
-
-
 //style basique pour main container
 .main__container {
     width: 100%;
@@ -35,4 +24,13 @@ html {
     padding: 0;
     box-sizing: border-box;
 }
+
+//style basique pour la balise a
+a {
+    color: unset;
+    text-decoration: none;
+}
+
+
+
 

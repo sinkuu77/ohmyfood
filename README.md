@@ -31,6 +31,6 @@ carte !
 
 ## Avant du lancement
 
-[] Remplacer quelques animations de CSS en JavaScript
-[] Rajouter des API
-[] Développer le système de BackEnd
+- [ ] Remplacer quelques animations de CSS en JavaScript
+- [ ] Rajouter des API
+- [ ] Développer le système de BackEnd

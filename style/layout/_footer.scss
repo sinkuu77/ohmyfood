@@ -1,6 +1,7 @@
 //footer
 footer {
     @include footer;
+    //l'ecran pour la tablette et desktop
     @media (min-width: 768px) {
         width: 100%;
         box-sizing: border-box;

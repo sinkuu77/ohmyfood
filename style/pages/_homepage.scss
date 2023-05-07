@@ -64,6 +64,7 @@
             }
     }
 }
+//l'ecran pour la tablette et desktop
 @media (min-width: 768px) {
     h1{
         width: 100%;
@@ -145,6 +146,7 @@
             font-weight: 500;
         }
     }
+    //l'ecran pour la tablette
     @media (min-width: 768px) {
         width: 100%;
         box-sizing: border-box;
@@ -159,6 +161,7 @@
             gap: 36.5px;
         }
     }
+    //l'ecran pour le desktop
     @media (min-width: 1025px) {
         justify-content: flex-start;
         padding: 50px 180px;
@@ -245,6 +248,7 @@
             padding-bottom: 66px;
         }
     }
+    //l'ecran pour la tablette
     @media (min-width: 768px) {
         width: 100%;
         display: flex;
@@ -263,6 +267,7 @@
             }
         }
     }
+    //l'ecran pour le desktop
     @media (min-width: 1025px) {
         padding: 30px 180px;
     }

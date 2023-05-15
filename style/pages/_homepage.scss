@@ -137,9 +137,11 @@
         gap: 23px;
         i {
             color: #7e7e7e;
-        }
-        .fa-store {
-            color: $point-color;
+            transition: all 300ms ease-in-out;
+            &:hover {
+                color: $point-color;
+                cursor: pointer;
+            }
         }
         span {
             font-size: 16px;

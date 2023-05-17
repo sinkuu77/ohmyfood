@@ -290,6 +290,14 @@ footer .footer__contents .footer__second li {
   justify-content: flex-start;
   align-items: center;
   gap: 23px;
+  transition: all 0.5s ease-in-out;
+}
+.fonctionnement__contents:hover {
+  background-color: rgba(146, 86, 220, 0.15);
+  cursor: pointer;
+}
+.fonctionnement__contents:hover > .fonctionnement__txt i {
+  color: #9356DC;
 }
 .fonctionnement__number {
   position: absolute;
@@ -313,11 +321,7 @@ footer .footer__contents .footer__second li {
 }
 .fonctionnement__txt i {
   color: #7e7e7e;
-  transition: all 300ms ease-in-out;
-}
-.fonctionnement__txt i:hover {
-  color: #9356DC;
-  cursor: pointer;
+  transition: all 0.5s ease-in-out;
 }
 .fonctionnement__txt span {
   font-size: 16px;

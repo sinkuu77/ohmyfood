@@ -11,7 +11,7 @@ Projet 4 - Améliorez l'interface d'un site mobile avec des animations CSS (Open
 <img src=https://user-images.githubusercontent.com/117595347/236698530-6eca3426-060c-4f4c-91a9-4183b8073ef2.jpg />
 
 ## le délai de production du site
-/23 - /23
+22.04.23 - 17.05.23
 
 ## Stack utilisé
 HTML, Sass

@@ -1,36 +1,27 @@
-# oh my food
+# Oh my food(un site “mobile first” qui répertorie les menus de restaurants gastronomiques)
 
-<!-- description -->
+<p>J'ai créé ce site dans le cadre du quatrième projet de ma formation en tant qu'intégrateur web chez OpenClassrooms.</p>
+<p> Vous pouvez trouver le lien vers le site ci-dessous 👇 </p>
+<a href=""></a>
 
-**Ohmyfood** est une entreprise de commande de repas en ligne. Notre concept permet aux
-utilisateurs de composer leur propre menu et de réduire leur temps d’attente dans les
-restaurants, car leur menu est préparé à l’avance. Plus de perte de temps à consulter la
-carte !
+## Preview
 
-<!--Contenu des pages-->
+Projet 4 - Améliorez l'interface d'un site mobile avec des animations CSS (OpenClassrooms)
 
-## Contenu des pages
+<img src=https://user-images.githubusercontent.com/117595347/236698530-6eca3426-060c-4f4c-91a9-4183b8073ef2.jpg />
 
-### Page d'accueil (x1)
+## le délai de production du site
+/23 - /23
 
-- Affichage de la localisation des restaurants. À terme, il sera possible de choisir sa
-  localisation pour trouver des restaurants proches d’un certain lieu.
-- Une courte présentation de l’entreprise.
-- Une section contenant les 4 menus sous forme de cartes. Au clic sur la carte,
-  l’utilisateur est redirigé vers la page du menu.
+## Stack utilisé
+HTML, Sass
 
-![readme1](https://user-images.githubusercontent.com/117595347/236698530-6eca3426-060c-4f4c-91a9-4183b8073ef2.jpg)
+## Point
+L'objectif de ce projet était de concevoir une page d'accueil en adoptant une approche Mobile First et d'incorporer des animations en utilisant Sass.
 
-
-### Pages de menu (x4)
-
-- 4 pages contenant chacune le menu d’un restaurant
-
-![readme2](https://user-images.githubusercontent.com/117595347/236698540-a6f6dc94-65cf-45fd-a717-699e2bda9e75.jpg)
+## Problème en réalisant ce projet
+<p>Il y avait une mission où je devais implémenter un loader de page sans utiliser JavaScript. </p>
+<p>C'est-à-dire que je devais résoudre ce problème uniquement avec CSS. Il fallait que le spinner tourne pendant quelques secondes puis disparaisse de la page. </p>
+<p>En parcourant les différentes propriétés de transformation CSS sur MDN, j'ai découvert 'scaleZ', ce qui m'a permis de résoudre le problème. </p>
 
 
-## Avant du lancement
-
-- [ ] Remplacer quelques animations de CSS en JavaScript
-- [ ] Rajouter des API
-- [ ] Développer le système de BackEnd
